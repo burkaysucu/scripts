@@ -214,7 +214,7 @@ $(document).on("change", "#autoUpdate", function() {
 	let v = $("#autoUpdate")[0].checked;
 	if (v) {
 		autoUpdateTimer = setInterval(function() {
-			let currentTime = new Date().toLocaleTimeString("tr");
+			let currentTime = new Date().toLocaleTimeString("tr", {timeZone: "Europe/Istanbul"});
 			$("#expectedExitTime").val(currentTime);
 			hours();
 		}, 1000);
