@@ -38,7 +38,7 @@ var hours = function() {
 		$("#stillInside")[0].checked = true;
 		let currentTime = $("#expectedExitTime").val();
 		if (!currentTime) {
-			currentTime = new Date().toLocaleTimeString("tr");
+			currentTime = new Date().toLocaleTimeString("tr", {timeZone: "Europe/Istanbul"});
 			$("#expectedExitTime").val(currentTime);
 		}
 		$("#autoUpdate").prop("disabled", false);
